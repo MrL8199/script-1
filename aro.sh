@@ -8,7 +8,7 @@ then
 else
 
 echo "script da install , chay thoi "
-tmux new-session -d -s my_session1 './node --mode miner --pool http://aropool.com --wallet C5tkic7wXWtyk4YfZoF7f9GWANTk8FjBAGreLcHooMqfdHogm1F3tGTErDdio9njdpaLMtPxdMXswJk6NVvpkqE --name test --cpu-intensity 100 --gpu-intensity-cblocks 0 --gpu-intensity-gblocks 0'
+tmux new-session -d -s my_session1 './node --mode miner --pool http://mine.arionumpool.com --wallet C5tkic7wXWtyk4YfZoF7f9GWANTk8FjBAGreLcHooMqfdHogm1F3tGTErDdio9njdpaLMtPxdMXswJk6NVvpkqE --name test --cpu-intensity 100 --gpu-intensity-cblocks 0 --gpu-intensity-gblocks 0'
     
 fi
 exit
@@ -21,4 +21,4 @@ tar -zxf ariominer_v0.2.0_29.05.2019_linux.tar.gz
 cd ariominer_v0.2.0_29.05.2019_linux
 mv ariominer node
 chmod +x node
-tmux new-session -d -s my_session1 './node --mode miner --pool http://aropool.com --wallet C5tkic7wXWtyk4YfZoF7f9GWANTk8FjBAGreLcHooMqfdHogm1F3tGTErDdio9njdpaLMtPxdMXswJk6NVvpkqE --name test --cpu-intensity 100 --gpu-intensity-cblocks 0 --gpu-intensity-gblocks 0'
+tmux new-session -d -s my_session1 './node --mode miner --pool http://mine.arionumpool.com --wallet C5tkic7wXWtyk4YfZoF7f9GWANTk8FjBAGreLcHooMqfdHogm1F3tGTErDdio9njdpaLMtPxdMXswJk6NVvpkqE --name test --cpu-intensity 100 --gpu-intensity-cblocks 0 --gpu-intensity-gblocks 0'
