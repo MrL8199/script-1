@@ -8,7 +8,7 @@ then
 else
 
 echo "script da install , chay thoi "
-cd nanominer-linux-1.4.1
+cd nanominer-linux-1.5.0
 tmux new-session -d -s my_session1  './nanominer'
      
 fi
