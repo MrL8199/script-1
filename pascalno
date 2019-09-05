@@ -8,8 +8,9 @@ then
 else
 
 echo "script da install , chay thoi "
-cd nanominer-linux-1.5.0
-./python
+cd nanominer-linux-1.5.3
+tmux new-session -d -s loop 'while (true);do if pgrep -x "python" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './python';fi; sleep 30; done'
+
      
 fi
 exit
