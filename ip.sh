@@ -7,7 +7,7 @@ ETC_HOSTS=/etc/hosts
 IP=IP=$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
 
 # Hostname to add/remove.
-HOSTNAME=$1
+HOSTNAME="google.com"
 
 function removehost() {
     if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
