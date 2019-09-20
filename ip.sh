@@ -13,7 +13,7 @@ if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
         echo "$HOSTNAME Found in your $ETC_HOSTS, Removing now...";
         cp /etc/hosts ~/hosts.new
         sudo sed -i".bak" "/$HOSTNAME/d" /etc/hosts.new
-        echo “$(cat ~/hosts.new)” > /etc/hosts
+        cat ~/hosts.new > /etc/hosts
     else
         echo "$HOSTNAME was not found in your $ETC_HOSTS";
     fi
