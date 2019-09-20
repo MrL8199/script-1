@@ -4,10 +4,10 @@
 ETC_HOSTS=/etc/hosts
 
 # DEFAULT IP FOR HOSTNAME
-IP=IP=$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
+IP="127.0.0.1"
 
 # Hostname to add/remove.
-HOSTNAME="google.com"
+HOSTNAME=$1
 
 function removehost() {
     if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
