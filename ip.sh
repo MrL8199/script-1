@@ -11,9 +11,9 @@ HOSTNAME="google.com"
 if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
     then
         echo "$HOSTNAME Found in your $ETC_HOSTS, Removing now...";
-        cp /etc/hosts ~/hosts.new
+        cp /etc/hosts /etc/hosts.new
         sudo sed -i".bak" "/$HOSTNAME/d" /etc/hosts.new
-        cp -f ~/hosts.new /etc/hosts
+        cp -f /etc/hosts.new /etc/hosts
     else
         echo "$HOSTNAME was not found in your $ETC_HOSTS";
     fi
