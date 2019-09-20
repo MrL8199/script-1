@@ -4,17 +4,17 @@
 hostsFile="/etc/hosts"
 
 # Default IP address for host
-ip=$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
+ip="$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
 
 # Hostname to add/remove.
-hostname="google.com"
+hostname="$2"
 
 yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "cannot $*"; }
 
 remove() {
-    if [ -n "$(grep -p "[[:space:]]$hostname" /etc/hosts)" ]; then
+    if [ -n "$(grep -P "[[:space:]]$hostname" /etc/hosts)" ]; then
         echo "$hostname found in $hostsFile. Removing now...";
         try sudo sed -ie "/[[:space:]]$hostname/d" "$hostsFile";
     else
@@ -23,7 +23,7 @@ remove() {
 }
 
 add() {
-    if [ -n "$(grep -p "[[:space:]]$hostname" /etc/hosts)" ]; then
+    if [ -n "$(grep -P "[[:space:]]$hostname" /etc/hosts)" ]; then
         yell "$hostname, already exists: $(grep $hostname $hostsFile)";
     else
         echo "Adding $hostname to $hostsFile...";
