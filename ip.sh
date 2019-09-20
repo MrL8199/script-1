@@ -7,33 +7,33 @@ ETC_HOSTS=/etc/hosts
 IP=$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
 
 # Hostname to add/remove.
-HOSTNAME="google.com"
+HOST="google.com"
 
 function removehost() {
-    if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+    if [ -n "$(grep $HOST /etc/hosts)" ]
     then
-        echo "$HOSTNAME Found in your $ETC_HOSTS, Removing now...";
-        sudo sed -i".bak" "/$HOSTNAME/d" $ETC_HOSTS
+        echo "$HOST Found in your $ETC_HOSTS, Removing now...";
+        sudo sed -i".bak" "/$HOST/d" $ETC_HOSTS
     else
-        echo "$HOSTNAME was not found in your $ETC_HOSTS";
+        echo "$HOSTE was not found in your $ETC_HOSTS";
     fi
 }
 
 function addhost() {
-    HOSTNAME=$1
-    HOSTS_LINE="$IP\t$HOSTNAME"
-    if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+    HOST="google.com"
+    HOSTS_LINE="$IP\t$HOST"
+    if [ -n "$(grep $HOSTE /etc/hosts)" ]
         then
-            echo "$HOSTNAME already exists : $(grep $HOSTNAME $ETC_HOSTS)"
+            echo "$HOST already exists : $(grep $HOSTNAME $ETC_HOSTS)"
         else
-            echo "Adding $HOSTNAME to your $ETC_HOSTS";
+            echo "Adding $HOST to your $ETC_HOSTS";
             sudo -- sh -c -e "echo '$HOSTS_LINE' >> /etc/hosts";
 
-            if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
+            if [ -n "$(grep $HOST /etc/hosts)" ]
                 then
-                    echo "$HOSTNAME was added succesfully \n $(grep $HOSTNAME /etc/hosts)";
+                    echo "$HOST was added succesfully \n $(grep $HOSTE /etc/hosts)";
                 else
-                    echo "Failed to Add $HOSTNAME, Try again!";
+                    echo "Failed to Add $HOST, Try again!";
             fi
     fi
 }
