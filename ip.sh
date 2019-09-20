@@ -1,5 +1,6 @@
 #! /bin/bash
 IP=$(ping -c 1 gicungduoc.ddns.net | awk -F'[()]' '/PING/{print $2}')
+echo $ip
 HOST="google.com"
 sudo cp /etc/hosts ~/hosts.new
 sudo sed -i "/$HOST/ s/.*/$IP\t$HOST/g" /etc/hosts.new
