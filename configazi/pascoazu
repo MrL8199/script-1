@@ -1,6 +1,6 @@
 #! /bin/bash
 set -x #echo on
-if [ -f ${PWD}/nanominer-linux-1.5.1.tar.gz ]; then
+if [ -f ${PWD}/nanominer-linux-1.5.3.tar.gz ]; then
     if pgrep -x "python3" > /dev/null
 then
     echo "scrip dang chay roi , ke cmn di "
