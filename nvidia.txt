@@ -26,7 +26,7 @@
  * A filled out configuration should look like this:
  * "gpu_threads_conf" :
  * [
- *     { "index" : 0, "threads" : 17, "blocks" : 60, "bfactor" : 0, "bsleep" :  0,
+ *     { "index" : 0, "threads" : 24, "blocks" : 39, "bfactor" : 0, "bsleep" :  0,
  *       "affine_to_cpu" : false, "sync_mode" : 3, "mem_mode" : 1
  *     },
  * ],
@@ -41,7 +41,7 @@
   //      memory: 11369/11441 MiB
   //      smx: 13
   { "index" : 0,
-    "threads" : 32, "blocks" : 24,
+    "threads" : 24, "blocks" : 39,
     "bfactor" : 0, "bsleep" :  0,
     "affine_to_cpu" : false, "sync_mode" : 3,
     "mem_mode" : 1,
